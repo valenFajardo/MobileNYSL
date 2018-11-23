@@ -109,6 +109,7 @@ h3 {
 #sign-in-button {
     margin-left: 10px;
     color: inherit;
+    background-color: #64DD17;
 }
 #sign-out-button {
     margin: 10px;
@@ -311,9 +312,14 @@ h3 {
 }
 
 #recent-posts-list{
-    background-color: #7FFF00;
+    background-color: #69F0AE;
 }
 
 .mdl-button{
     position: relative; 
 }
+
+#message-form{
+    background-color: #B2FF59;
+}
+

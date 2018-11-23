@@ -358,13 +358,24 @@
 					<div>
 					  <button id="sign-in-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign in with Google</button>
 					</div>
+                    <div>
+                      <div class="collapse" id="collapseExample">
+                          <div class="bg-card card card-body">
+                              <label for="email">Email: </label>
+                              <input type="email" name="email" id="email">
+                              <label for="password">Password: </label>
+                              <input type="password" name="password" id="password">
+                          </div>
+                      </div>
+					  <button id="signIn" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="material-icons">account_circle</i> Sign in with Email</button>
+					</div>
 				  </section>
 
 				  <!-- Header section containing logo and menu -->
 				  <header class="header mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
 
 					<div class="mdl-layout__header-row titlebar">
-					  <h3 class="logo">Database Web Quickstart</h3>
+					  <h3 class="logo">Forum NYSL</h3>
 					  <button id="sign-out-button" class="mdl-button--raised mdl-button mdl-js-button mdl-js-ripple-effect"><i class="material-icons">account_circle</i> Sign out</button>
 					</div>
 

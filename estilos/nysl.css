@@ -96,3 +96,7 @@ img {
 	}
 }
 
+.bg-card{
+    background-color:chartreuse;
+    background-image: none;
+}

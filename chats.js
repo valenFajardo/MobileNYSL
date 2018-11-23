@@ -7,6 +7,7 @@ var messageForm = document.getElementById('message-form');
 var messageInput = document.getElementById('new-post-message');
 var titleInput = document.getElementById('new-post-title');
 var signInButton = document.getElementById('sign-in-button');
+var signEmail = document.getElementById('signIn')
 var signOutButton = document.getElementById('sign-out-button');
 var splashPage = document.getElementById('page-splash');
 var addPost = document.getElementById('add-post');
@@ -18,6 +19,8 @@ var recentMenuButton = document.getElementById('menu-recent');
 //var myPostsMenuButton = document.getElementById('menu-my-posts');
 //var myTopPostsMenuButton = document.getElementById('menu-my-top-posts');
 var listeningFirebaseRefs = [];
+var emailform = document.getElementById('email')
+var passwordform = document.getElementById('password')
 
 /**
  * Saves a new post to the Firebase DB.
@@ -391,10 +394,22 @@ function startForum (){
     var provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider);
   });
+    
+ //Login con otro Email
+ signEmail.addEventListener('click', function(){
+     firebase.auth().signInWithEmailAndPassword(emailform.value, passwordform.value).catch(function(error) {
+     var errorCode = error.code;
+     var errorMessage = error.message;
+  // ...
+});
+     
+ })
 
   // Bind Sign out button.
   signOutButton.addEventListener('click', function() {
     firebase.auth().signOut();
+    firebase.auth().signOut().then(function() {}).catch(function(error) {
+    });
   });
 
   // Listen for auth state changes
